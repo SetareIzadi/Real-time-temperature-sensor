@@ -20,6 +20,11 @@ VCC                  5V
 GND                  A0
 ```
 
+### Schematic of the Fritzing
+![Frederik](Assets/Schematic.png)
+
+
+### Simple diagram explanation
 ```
      +--------------+
      | R2 thermistor|
