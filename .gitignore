@@ -1,0 +1,17 @@
+# VS Code settings
+.vscode/
+
+# macOS metadata
+.DS_Store
+.DS_STORE
+
+# Arduino build files
+*.ino.cpp
+*.ino.d
+*.elf
+*.bin
+*.eep
+
+# General temp/build files
+*.log
+*.tmp
