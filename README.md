@@ -20,11 +20,10 @@ VCC                  5V
 GND                  A0
 ```
 
-### Schematic of the circuit
-![Setare](Assets/Schematic.png)
+### Schematic of the Circuit
+![Schematic](Assets/Schematic.png)
 
-
-### Simple diagram explanation
+### Simple Diagram Explanation
 ```
      +--------------+
      | R2 thermistor|
@@ -38,22 +37,31 @@ GND                  A0
          |     |  
          +-----+
          Arduino
+```
 
 ## Installation
 
-1. Open the Arduino IDE
-2. Open `temperature_sensor/temperature_sensor.ino`
-3. Select your Arduino board from Tools > Board
-4. Select the correct port from Tools > Port
-5. Click Upload
+1. ```pip install pyserial```
+2. Open the Arduino IDE.
+3. Open `temperature_sensor/temperature_sensor.ino`.
+4. Select your Arduino board from **Tools > Board**.
+5. Select the correct port from **Tools > Port**.
+6. Click **Upload**.
 
 ## Usage
 
-1. After uploading, open the Serial Monitor (Tools > Serial Monitor)
-2. Set the baud rate to 9600
-3. Temperature readings will appear every second in both Celsius and Fahrenheit
+1. After uploading, open the Serial Monitor (**Tools > Serial Monitor**).
+2. Set the baud rate to `9600`.
+3. Temperature readings will appear every second in both Celsius and Fahrenheit.
 
-Example output:
+### Usage After Python Implementation:
+- Arduino sends measurements (e.g., temperature, vibration, etc.).
+- Python reads the data via the serial port.
+- Python prints the data nicely.
+- Python stores the data in CSV or JSON format.
+- (Optionally) Python inserts the data into a real database later.
+
+### Example Output:
 ```
 Real-time Temperature Sensor
 ----------------------------
@@ -66,13 +74,14 @@ Temperature: 25.4 C / 77.7 F
 ## How It Works
 
 The R2 thermistor is an analog temperature sensor that outputs a voltage proportional to temperature:
-- Output: 10mV per degree Celsius
-- Range: -55°C to 120°C
+- **Output**: 10mV per degree Celsius
+- **Range**: -55°C to 120°C
 
-The Arduino reads the analog voltage and converts it to temperature using:
+The Arduino reads the analog voltage and converts it to temperature using the formula:
 ```
 Temperature (°C) = Voltage (V) × 100
 ```
 
 ## License
-This project is open source created in our group project
+
+This project is open source and was created as part of our group project.
