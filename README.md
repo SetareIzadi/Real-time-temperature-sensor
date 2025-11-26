@@ -2,12 +2,12 @@
 
 A simple prototype for a real-time temperature sensor using an Arduino and LM35 temperature sensor.
 
-## Components Required
+## Components
 
-- Arduino (Uno, Nano, or compatible board)
+- Arduino Uno
 - LM35 Temperature Sensor
-- Jumper wires
-- Breadboard (optional)
+- Wires
+- Breadboard 
 
 ## Wiring Diagram
 
