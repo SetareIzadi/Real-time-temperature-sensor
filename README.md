@@ -21,7 +21,7 @@ GND                  A0
 ```
 
 ### Schematic of the circuit
-![Frederik](Assets/Schematic.png)
+![Setare](Assets/Schematic.png)
 
 
 ### Simple diagram explanation
