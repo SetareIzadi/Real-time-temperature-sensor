@@ -20,6 +20,12 @@ const int TEMP_SENSOR_PIN = A0;
 // Interval between readings (milliseconds)
 const unsigned long READ_INTERVAL = 1000;
 
+// Arduino reference voltage (5.0V for Uno/Nano, 3.3V for some boards)
+const float REFERENCE_VOLTAGE = 5.0;
+
+// ADC resolution (10-bit = 1024 steps)
+const float ADC_RESOLUTION = 1024.0;
+
 // Variable to track last read time
 unsigned long lastReadTime = 0;
 
@@ -57,9 +63,8 @@ float readTemperature() {
   // Read analog value (0-1023)
   int sensorValue = analogRead(TEMP_SENSOR_PIN);
   
-  // Convert to voltage (assuming 5V reference)
-  // Arduino ADC has 10-bit resolution: 5V / 1024 = 0.00488V per step
-  float voltage = sensorValue * (5.0 / 1024.0);
+  // Convert to voltage (using reference voltage and ADC resolution)
+  float voltage = sensorValue * (REFERENCE_VOLTAGE / ADC_RESOLUTION);
   
   // LM35 outputs 10mV per degree Celsius
   // Temperature (C) = Voltage (V) * 100
