@@ -1,18 +1,26 @@
-Real-time Temperature Sensor
+# Real-time Temperature Sensor
+
 A simple prototype for a real-time temperature sensor using an Arduino and R2 thermistor temperature sensor.
 
-Components
-Arduino Uno
-R2 thermistor - Temperature Sensor
-Wires
-Breadboard
-Wiring Diagram
+## Components
+
+- Arduino Uno
+- R2 thermistor - Temperature Sensor
+- Wires
+- Breadboard 
+
+## Wiring Diagram
+
 Connect the R2 thermistor sensor to the Arduino as follows:
 
+```
 R2 thermistor Pin    Arduino Pin
 -----------------    -----------
 VCC                  5V
 GND                  A0
+```
+
+```
      +--------------+
      | R2 thermistor|
      +------+-------+
@@ -41,9 +49,14 @@ GND                  A0
 3. Temperature readings will appear every second in both Celsius and Fahrenheit
 
 Example output:
+```
 Real-time Temperature Sensor
-Reading temperature from R2 thermistor sensor... Temperature: 25.4 C / 77.7 F Temperature: 25.5 C / 77.9 F Temperature: 25.4 C / 77.7 F
-
+----------------------------
+Reading temperature from R2 thermistor sensor...
+Temperature: 25.4 C / 77.7 F
+Temperature: 25.5 C / 77.9 F
+Temperature: 25.4 C / 77.7 F
+```
 
 ## How It Works
 
@@ -52,8 +65,9 @@ The R2 thermistor is an analog temperature sensor that outputs a voltage proport
 - Range: -55°C to 120°C
 
 The Arduino reads the analog voltage and converts it to temperature using:
+```
 Temperature (°C) = Voltage (V) × 100
-
+```
 
 ## License
 This project is open source created in our group project
