@@ -82,6 +82,13 @@ The Arduino reads the analog voltage and converts it to temperature using the fo
 Temperature (°C) = Voltage (V) × 100
 ```
 
+## Personal notes
+
+### Data capacity
+- If this protoype is to be used in a real life implementation for the Novonesis company, we'd need to ensure that Novonesis has the capacity enough on the servers or similar for the temperature data to be stored. Because there would be large amounts of datasets overtime during the freezer transportation which would need to be stored efficiently to not overload their data capacity in the company. 
+   - Either cloud solution or their own servers? We'd need to ask Novonesis about their current data storage solution. If this issue persists, we could also further in our implementation ensure that the temperature sensor only measure every 10 minutes instead of each second to reduce dataset.
+
+
 ## License
 
 This project is open source and was created as part of our group project.
